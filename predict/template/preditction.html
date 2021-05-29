@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    {% include 'html_head.html' %}
+    <style type="text/css">
+        .bgimg {
+            background-image: url('{% static 'back.png' %}');
+        }
+    </style>
+</head>
+<body class="hold-transition sidebar-collapse layout-fixed">
+<div class="wrapper">
+
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper bgimg">
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-6">
+                <!-- general form elements -->
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Pneumonia Detection</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form>
+                        <div class="card-body">
+
+                            <div class="form-group">
+                                <label for="exampleInputFile">Upload Scan Image</label>
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="exampleInputFile" required>
+                                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                    </div>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">Upload</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                                <label class="form-check-label" for="exampleCheck1">I agree terms and
+                                    conditions.</label>
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-primary btn-block">Detect</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- /.content -->
+            </div>
+        </div>
+    </div>
+    <!-- /.content-wrapper -->
+    {% include 'footer1.html' %}
+
+</div>
+<!-- ./wrapper -->
+<script src="{% static 'plugins/chart.js/Chart.min.js' %}"></script>
+
+{% include 'footer.html' %}
+<script>
+    //-------------
+    //- BAR CHART -
+    //-------------
+    var areaChartData = {
+        labels: ['Plot'],
+        datasets: [
+            {
+                label: 'Negative',
+                backgroundColor: 'rgba(60,141,188,0.9)',
+                borderColor: 'rgba(60,141,188,0.8)',
+                pointRadius: false,
+                pointColor: '#3b8bba',
+                pointStrokeColor: 'rgba(60,141,188,1)',
+                pointHighlightFill: '#fff',
+                pointHighlightStroke: 'rgba(60,141,188,1)',
+                data: [{{ neg }}]
+            },
+            {
+                label: 'Zero',
+                backgroundColor: 'rgba(210, 214, 222, 1)',
+                borderColor: 'rgba(210, 214, 222, 1)',
+                pointRadius: false,
+                pointColor: 'rgba(210, 214, 222, 1)',
+                pointStrokeColor: '#c1c7d1',
+                pointHighlightFill: '#fff',
+                pointHighlightStroke: 'rgba(220,220,220,1)',
+                data: [{{ zero }}]
+            },
+            {
+                label: 'Positive',
+                backgroundColor: 'rgba(53,0,188,0.9)',
+                borderColor: 'rgba(53,0,188,0.8)',
+                pointRadius: false,
+                pointColor: '#3500bc',
+                pointStrokeColor: 'rgb(71,1,188)',
+                pointHighlightFill: '#fff',
+                pointHighlightStroke: 'rgba(71,1,188,1)',
+                data: [{{ pos }}]
+            },
+        ]
+    }
+    var barChartCanvas = $('#barChart').get(0).getContext('2d')
+    var barChartData = jQuery.extend(true, {}, areaChartData)
+    var temp0 = areaChartData.datasets[0]
+    var temp1 = areaChartData.datasets[1]
+    barChartData.datasets[0] = temp1
+    barChartData.datasets[1] = temp0
+
+    var barChartOptions = {
+        responsive: true,
+        maintainAspectRatio: false,
+        datasetFill: false
+    }
+
+    var barChart = new Chart(barChartCanvas, {
+        type: 'bar',
+        data: barChartData,
+        options: barChartOptions
+    })
+</script>
+</body>
+</html>
+
+
+

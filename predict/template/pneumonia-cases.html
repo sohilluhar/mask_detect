@@ -1,0 +1,424 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    {% include 'html_head.html' %}
+
+</head>
+<body class="hold-transition sidebar-collapse layout-fixed ">
+<div class="wrapper">
+
+    {% include 'nav_bar.html' %}
+
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid ">
+                <br>
+                <div class="row text-center">
+                    <div class="col-md-10 ml-auto mr-auto">
+                        <div class="card card-warning collapsed-card">
+                            <div class="card-header">
+                                <h3 class="card-title text-white">Map findings per single finding</h3>
+
+                                <div class="card-tools">
+                                    <button type="button" class="btn text-white btn-tool" data-card-widget="collapse"><i
+                                            class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <!-- /.card-tools -->
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+
+                                <div class="text-center">
+                                    <p class="text-bold">{{ final_str|linebreaks }}</p>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+                <h3 class=" text-center text-bold">Feature distributions among pneumonia records</h3>
+
+                <br>
+                <div class="row text-center">
+                    <div class="col-md-10 ml-auto mr-auto">
+                        <div class="card card-warning collapsed-card">
+                            <div class="card-header">
+                                <h3 class="card-title text-white">Patient Age</h3>
+
+                                <div class="card-tools">
+                                    <button type="button" class="btn text-white btn-tool" data-card-widget="collapse"><i
+                                            class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <!-- /.card-tools -->
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <div class="card card-success">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Graph</h3>
+
+                                        <div class="card-tools">
+                                            <button type="button" class="btn btn-tool" data-card-widget="maximize"><i
+                                                    class="fas fa-expand"></i>
+                                            </button>
+                                        </div>
+                                        <!-- /.card-tools -->
+                                    </div>
+
+                                    <div class="card-body">
+
+                                        <div class="text-center">
+                                            <img class="img-fluid text-center"
+                                                 src="data:image/png;base64,{{ age }}"/>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-10 ml-auto mr-auto">
+                        <div class="card card-warning collapsed-card">
+                            <div class="card-header">
+                                <h3 class="card-title text-white">Patient Gender</h3>
+
+                                <div class="card-tools">
+                                    <button type="button" class="btn text-white btn-tool" data-card-widget="collapse"><i
+                                            class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <!-- /.card-tools -->
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <div class="card card-success">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Graph</h3>
+
+                                        <div class="card-tools">
+                                            <button type="button" class="btn btn-tool" data-card-widget="maximize"><i
+                                                    class="fas fa-expand"></i>
+                                            </button>
+                                        </div>
+                                        <!-- /.card-tools -->
+                                    </div>
+                                    <div class="card-body">
+
+                                        <div class="text-center">
+                                            <img class="img-fluid text-center"
+                                                 src="data:image/png;base64,{{ gender }}"/></div>
+
+                                    </div>
+                                    <!-- /.card-body -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                    <div class="col-md-10 ml-auto mr-auto">
+                        <div class="card card-warning collapsed-card">
+                            <div class="card-header">
+                                <h3 class="card-title text-white">Position</h3>
+
+                                <div class="card-tools">
+                                    <button type="button" class="btn text-white btn-tool" data-card-widget="collapse"><i
+                                            class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <!-- /.card-tools -->
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <div class="card card-success">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Graph</h3>
+
+                                        <div class="card-tools">
+                                            <button type="button" class="btn btn-tool" data-card-widget="maximize"><i
+                                                    class="fas fa-expand"></i>
+                                            </button>
+                                        </div>
+                                        <!-- /.card-tools -->
+                                    </div>
+                                    <div class="card-body">
+
+                                        <div class="text-center">
+                                            <img class="img-fluid text-center"
+                                                 src="data:image/png;base64,{{ position }}"/></div>
+                                        <p class="text-black-50 text-center">Features mostly retained the same
+                                            distribution among the pneumonia
+                                            records as in the original dataset. (For 'View Position', 'AP' is slightly
+                                            more prevalent than 'PA'
+                                            in the pneumonia records, whereas it is vice versa in the original dataset.
+                                            But the prevalence is
+                                            not very significant in both cases).</p>
+                                    </div>
+                                    <!-- /.card-body -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-10 ml-auto mr-auto">
+                        <div class="card card-warning collapsed-card">
+                            <div class="card-header">
+                                <h3 class="card-title text-white">Patient ID</h3>
+
+                                <div class="card-tools">
+                                    <button type="button" class="btn text-white btn-tool" data-card-widget="collapse"><i
+                                            class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <!-- /.card-tools -->
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <div class="card card-success">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Graph</h3>
+
+                                        <div class="card-tools">
+                                            <button type="button" class="btn btn-tool" data-card-widget="maximize"><i
+                                                    class="fas fa-expand"></i>
+                                            </button>
+                                        </div>
+                                        <!-- /.card-tools -->
+                                    </div>
+                                    <div class="card-body">
+
+                                        <div class="text-center">
+                                            <p class="text-bold">{{ patient_str|linebreaks }}</p>
+                                            <br>
+                                            <img class="img-fluid text-center"
+                                                 src="data:image/png;base64,{{ patient_graph }}"/></div>
+
+                                    </div>
+                                    <!-- /.card-body -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                    <div class="col-md-10 ml-auto mr-auto">
+                        <div class="card card-warning collapsed-card">
+                            <div class="card-header">
+                                <h3 class="card-title text-white">Follow Up</h3>
+
+                                <div class="card-tools">
+                                    <button type="button" class="btn text-white btn-tool" data-card-widget="collapse"><i
+                                            class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <!-- /.card-tools -->
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <div class="card card-success">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Graph</h3>
+
+                                        <div class="card-tools">
+                                            <button type="button" class="btn btn-tool" data-card-widget="maximize"><i
+                                                    class="fas fa-expand"></i>
+                                            </button>
+                                        </div>
+                                        <!-- /.card-tools -->
+                                    </div>
+                                    <div class="card-body">
+
+                                        <div class="text-center">
+                                            <img class="img-fluid text-center"
+                                                 src="data:image/png;base64,{{ follow_up }}"/></div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+
+
+                <div class="row text-center">
+                    <div class="col-md-10 ml-auto mr-auto">
+                        <div class="card card-warning collapsed-card">
+                            <div class="card-header">
+                                <h3 class="card-title text-white">Pneumonia & comorbid findings</h3>
+
+                                <div class="card-tools">
+                                    <button type="button" class="btn text-white btn-tool" data-card-widget="collapse"><i
+                                            class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <!-- /.card-tools -->
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <div class="card card-success">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Graph</h3>
+
+                                        <div class="card-tools">
+                                            <button type="button" class="btn btn-tool" data-card-widget="maximize"><i
+                                                    class="fas fa-expand"></i>
+                                            </button>
+                                        </div>
+                                        <!-- /.card-tools -->
+                                    </div>
+                                    <div class="card-body">
+
+                                        <div class="text-center">
+                                            <img class="img-fluid text-center"
+                                                 src="data:image/png;base64,{{ comorbid }}"/>
+                                            <br>
+                                            <p class="text-bold">
+                                                {{ data1 |linebreaks }}</p>
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <img class="img-fluid text-center"
+                                                 src="data:image/png;base64,{{ comorbid2 }}"/>
+                                            <br>
+                                            <p class="text-bold">
+                                                {{ data2 |linebreaks }}</p>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-10 ml-auto mr-auto">
+                        <div class="card card-warning collapsed-card">
+                            <div class="card-header">
+                                <h3 class="card-title text-white">Frequency of comorbid conditions with pneumonia (per
+                                    each condition)
+                                </h3>
+
+                                <div class="card-tools">
+                                    <button type="button" class="btn text-white btn-tool" data-card-widget="collapse"><i
+                                            class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <!-- /.card-tools -->
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <div class="card card-success">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Graph</h3>
+
+                                        <div class="card-tools">
+                                            <button type="button" class="btn btn-tool" data-card-widget="maximize"><i
+                                                    class="fas fa-expand"></i>
+                                            </button>
+                                        </div>
+                                        <!-- /.card-tools -->
+                                    </div>
+                                    <div class="card-body">
+
+                                        <div class="text-center">
+                                            <img class="img-fluid text-center"
+                                                 src="data:image/png;base64,{{ comorbidconditions }}"/>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-10 ml-auto mr-auto">
+                        <div class="card card-warning collapsed-card">
+                            <div class="card-header">
+                                <h3 class="card-title text-white">Number of deseases per patient
+                                </h3>
+
+                                <div class="card-tools">
+                                    <button type="button" class="btn text-white btn-tool" data-card-widget="collapse"><i
+                                            class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <!-- /.card-tools -->
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <div class="card card-success">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Graph</h3>
+
+                                        <div class="card-tools">
+                                            <button type="button" class="btn btn-tool" data-card-widget="maximize"><i
+                                                    class="fas fa-expand"></i>
+                                            </button>
+                                        </div>
+                                        <!-- /.card-tools -->
+                                    </div>
+                                    <div class="card-body">
+
+                                        <div class="text-center">
+                                            <p class="text-bold">Full Dataset</p>
+                                            <img class="img-fluid text-center"
+                                                 src="data:image/png;base64,{{ deseasesperpatient1 }}"/>
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <p class="text-bold"> Pneumonia </p>
+                                            <img class="img-fluid text-center"
+                                                 src="data:image/png;base64,{{ deseasesperpatient }}"/>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+
+            </div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+
+</div>
+{% include 'footer.html' %}
+<!-- jQuery -->
+
+</body>
+</html>

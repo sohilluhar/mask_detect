@@ -1,0 +1,352 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    {% include 'html_head.html' %}
+
+</head>
+<body class="hold-transition sidebar-collapse layout-fixed ">
+<div class="wrapper">
+
+    {% include 'nav_bar.html' %}
+
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid ">
+                <br>
+                <div class="row text-center">
+                    <div class="col-md-10 ml-auto mr-auto">
+                        <div class="card card-primary collapsed-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Age</h3>
+
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+                                            class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <!-- /.card-tools -->
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <div class="card card-success">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Histogram</h3>
+
+                                        <div class="card-tools">
+                                            <button type="button" class="btn btn-tool" data-card-widget="maximize"><i
+                                                    class="fas fa-expand"></i>
+                                            </button>
+                                        </div>
+                                        <!-- /.card-tools -->
+                                    </div>
+                                    <!-- /.card-header -->
+                                    <div class="card-body">
+                                        <div class="text-center">
+                                            <img class="img-fluid text-center"
+                                                 src="data:image/png;base64,{{ age_plot }}"/>
+                                        </div>
+                                    </div>
+                                    <!-- /.card-body -->
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+                <div class="row text-center">
+
+
+                    <div class="col-md-10 ml-auto mr-auto">
+                        <div class="card card-primary collapsed-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Gender</h3>
+
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+                                            class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <!-- /.card-tools -->
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <div class="card card-success">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Bar Chart</h3>
+
+                                        <div class="card-tools">
+                                            <button type="button" class="btn btn-tool" data-card-widget="maximize"><i
+                                                    class="fas fa-expand"></i>
+                                            </button>
+                                        </div>
+                                        <!-- /.card-tools -->
+                                    </div>
+                                    <!-- /.card-header -->
+                                    <div class="card-body">
+                                        <div class="text-center">
+                                            <img class="img-fluid text-center"
+                                                 src="data:image/png;base64,{{ gender }}"/>
+                                        </div>
+                                    </div>
+                                    <!-- /.card-body -->
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+                <div class="row text-center">
+
+                    <div class="col-md-10 ml-auto mr-auto">
+                        <div class="card card-primary collapsed-card">
+                            <div class="card-header">
+                                <h3 class="card-title">View Position</h3>
+
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+                                            class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <!-- /.card-tools -->
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <div class="card card-success">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Bar Chart</h3>
+
+                                        <div class="card-tools">
+                                            <button type="button" class="btn btn-tool" data-card-widget="maximize"><i
+                                                    class="fas fa-expand"></i>
+                                            </button>
+                                        </div>
+                                        <!-- /.card-tools -->
+                                    </div>
+                                    <!-- /.card-header -->
+                                    <div class="card-body">
+                                        <div class="text-center">
+                                            <img class="img-fluid text-center"
+                                                 src="data:image/png;base64,{{ view_position }}"/>
+                                        </div>
+                                    </div>
+                                    <!-- /.card-body -->
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+                <div class="row text-center">
+
+                    <div class="col-md-10 ml-auto mr-auto">
+                        <div class="card card-primary collapsed-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Follow Up</h3>
+
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+                                            class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <!-- /.card-tools -->
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <div class="card card-success">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Histogram</h3>
+
+                                        <div class="card-tools">
+                                            <button type="button" class="btn btn-tool" data-card-widget="maximize"><i
+                                                    class="fas fa-expand"></i>
+                                            </button>
+                                        </div>
+                                        <!-- /.card-tools -->
+                                    </div>
+                                    <!-- /.card-header -->
+                                    <div class="card-body">
+                                        <div class="text-center">
+                                            <img class="img-fluid text-center"
+                                                 src="data:image/png;base64,{{ followup }}"/>
+                                            <p class="text-info">
+                                                Follow-up number 0 (first visit): {{ follow_up_0 }}
+                                                ({{ per_follow_up_0 }})
+                                                <br>
+                                                Follow-up number 1 (second visit): {{ follow_up_1 }}
+                                                ({{ per_follow_up_1 }})
+                                                <br>
+                                                Follow-up number 2 (second visit): {{ follow_up_2 }}
+                                                ({{ per_follow_up_2 }})
+                                                <br>
+                                                Follow-up number 3 (second visit): {{ follow_up_3 }}
+                                                ({{ per_follow_up_3 }})
+                                                <br>
+                                                Follow-up number 4 (second visit): {{ follow_up_4 }}
+                                                ({{ per_follow_up_4 }})
+
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- /.card-body -->
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+                <div class="row text-center">
+
+                    <div class="col-md-10 ml-auto mr-auto">
+                        <div class="card card-primary collapsed-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Finding Labels</h3>
+
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+                                            class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <!-- /.card-tools -->
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <p class="text-black-50">
+                                        {{ print_str1 }}</p>
+
+                                    <p class="text-bold">
+                                        {{ findings }}</p>
+                                    <p class="text-primary text-bold">{{ print_str2 }}</p>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+                <div class="row text-center">
+
+                    <div class="col-md-10 ml-auto mr-auto">
+                        <div class="card card-primary collapsed-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Patient ID</h3>
+
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+                                            class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <!-- /.card-tools -->
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <div class="card card-success">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Histogram</h3>
+
+                                        <div class="card-tools">
+                                            <button type="button" class="btn btn-tool" data-card-widget="maximize"><i
+                                                    class="fas fa-expand"></i>
+                                            </button>
+                                        </div>
+                                        <!-- /.card-tools -->
+                                    </div>
+                                    <!-- /.card-header -->
+                                    <div class="card-body">
+                                        <div class="text-center">
+                                            <img class="img-fluid text-center"
+                                                 src="data:image/png;base64,{{ patient_id_graph }}"/>
+                                            <br>
+
+
+                                            <p class="text-bold">
+                                                {{ patient_print0 }}</p>
+                                            <p class="text-black-50">{{ patient_print1 | linebreaks }}</p>
+                                        </div>
+                                    </div>
+                                    <!-- /.card-body -->
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+                <div class="row text-center">
+
+                    <div class="col-md-10 ml-auto mr-auto">
+                        <div class="card card-primary collapsed-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Image width & height, pixel spacing</h3>
+
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+                                            class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <!-- /.card-tools -->
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <div class="card card-success">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Histogram</h3>
+
+                                        <div class="card-tools">
+                                            <button type="button" class="btn btn-tool" data-card-widget="maximize"><i
+                                                    class="fas fa-expand"></i>
+                                            </button>
+                                        </div>
+                                        <!-- /.card-tools -->
+                                    </div>
+                                    <!-- /.card-header -->
+                                    <div class="card-body">
+                                        <div class="text-center">
+                                            <p class="text-bold">
+                                                {{ image_str_final1|linebreaks }}</p>
+
+                                            <img class="img-fluid text-center"
+                                                 src="data:image/png;base64,{{ img_graph1 }}"/>
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <img class="img-fluid text-center"
+                                                 src="data:image/png;base64,{{ img_graph2 }}"/>
+
+                                            <p class="text-bold">
+                                                {{ image_str_final2|linebreaks }}</p>
+                                        </div>
+                                    </div>
+                                    <!-- /.card-body -->
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+
+
+                </div>
+
+            </div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+
+</div>
+{% include 'footer.html' %}
+<!-- jQuery -->
+
+</body>
+</html>

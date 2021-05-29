@@ -1,0 +1,595 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    {% include 'html_head.html' %}
+
+</head>
+<body class="hold-transition sidebar-collapse layout-fixed ">
+<div class="wrapper">
+
+    {% include 'nav_bar.html' %}
+
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid ">
+                <br>
+                <div class="row text-center">
+                    <div class="col-md-12 ml-auto mr-auto">
+                        <div class="card card-cyan collapsed-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Intensity Distribution</h3>
+
+                                <div class="card-tools">
+                                    <button type="button" class="btn text-white btn-tool" data-card-widget="collapse"><i
+                                            class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <!-- /.card-tools -->
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+
+                                <div class="text-center">
+                                    <div class="card card-success">
+                                        <div class="card-header">
+                                            <h3 class="card-title">Graph</h3>
+
+                                            <div class="card-tools">
+                                                <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                                                    <i
+                                                            class="fas fa-expand"></i>
+                                                </button>
+                                            </div>
+                                            <!-- /.card-tools -->
+                                        </div>
+                                        <div class="card-body">
+
+                                            <div class="text-center">
+
+                                                {#                                                <p class="text-bold"> Pneumonia </p>#}
+                                                <img class="img-fluid text-center"
+                                                     src="{% static 'pixel-img/1.png' %}"/>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <img class="img-fluid text-center"
+                                                     src="{% static 'pixel-img/2.png' %}"/>
+
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                    <div class="col-md-12 ml-auto mr-auto">
+                        <div class="card card-cyan collapsed-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Sample Pneumonia distribution with background</h3>
+
+                                <div class="card-tools">
+                                    <button type="button" class="btn text-white btn-tool" data-card-widget="collapse"><i
+                                            class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <!-- /.card-tools -->
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+
+                                <div class="text-center">
+                                    <div class="card card-success">
+                                        <div class="card-header">
+                                            <h3 class="card-title">Graph</h3>
+
+                                            <div class="card-tools">
+                                                <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                                                    <i
+                                                            class="fas fa-expand"></i>
+                                                </button>
+                                            </div>
+                                            <!-- /.card-tools -->
+                                        </div>
+                                        <div class="card-body">
+
+                                            <div class="text-center">
+
+                                                {#                                                <p class="text-bold"> Pneumonia </p>#}
+                                                <img class="img-fluid text-center"
+                                                     src="{% static 'pixel-img/3-1.png' %}"/>
+                                                <br>
+                                                <br>
+                                                <img class="img-fluid text-center"
+                                                     src="{% static 'pixel-img/3-2.png' %}"/>
+                                                <br>
+                                                <br>
+                                                <img class="img-fluid text-center"
+                                                     src="{% static 'pixel-img/3-3.png' %}"/>
+                                                <br>
+                                                <br>
+                                                <img class="img-fluid text-center"
+                                                     src="{% static 'pixel-img/3-4.png' %}"/>
+                                                <br>
+                                                <br>
+                                                <img class="img-fluid text-center"
+                                                     src="{% static 'pixel-img/3-5.png' %}"/>
+                                                <br>
+                                                <br>
+                                                <img class="img-fluid text-center"
+                                                     src="{% static 'pixel-img/3-6.png' %}"/>
+                                                <br>
+                                                <br>
+                                                <img class="img-fluid text-center"
+                                                     src="{% static 'pixel-img/3-7.png' %}"/>
+                                                <br>
+                                                <br>
+                                                <img class="img-fluid text-center"
+                                                     src="{% static 'pixel-img/3-8.png' %}"/>
+                                                <br>
+                                                <br>
+                                                <img class="img-fluid text-center"
+                                                     src="{% static 'pixel-img/3-9.png' %}"/>
+                                                <br>
+                                                <br>
+                                                <img class="img-fluid text-center"
+                                                     src="{% static 'pixel-img/3-10.png' %}"/>
+                                                <br>
+                                                <br>
+
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                    <div class="col-md-12 ml-auto mr-auto">
+                        <div class="card card-cyan collapsed-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Remove background</h3>
+
+                                <div class="card-tools">
+                                    <button type="button" class="btn text-white btn-tool" data-card-widget="collapse"><i
+                                            class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <!-- /.card-tools -->
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+
+                                <div class="text-center">
+                                    <div class="card card-success">
+                                        <div class="card-header">
+                                            <h3 class="card-title">Graph</h3>
+
+                                            <div class="card-tools">
+                                                <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                                                    <i
+                                                            class="fas fa-expand"></i>
+                                                </button>
+                                            </div>
+                                            <!-- /.card-tools -->
+                                        </div>
+                                        <div class="card-body">
+
+                                            <div class="text-center">
+
+                                                {#                                                <p class="text-bold"> Pneumonia </p>#}
+                                                <img class="img-fluid text-center"
+                                                     src="{% static 'pixel-img/4-1.png' %}"/>
+                                                <br>
+                                                <br>
+                                                <img class="img-fluid text-center"
+                                                     src="{% static 'pixel-img/4-2.png' %}"/>
+                                                <br>
+                                                <br>
+                                                <img class="img-fluid text-center"
+                                                     src="{% static 'pixel-img/4-3.png' %}"/>
+                                                <br>
+                                                <br>
+                                                <img class="img-fluid text-center"
+                                                     src="{% static 'pixel-img/4-4.png' %}"/>
+                                                <br>
+                                                <br>
+                                                <img class="img-fluid text-center"
+                                                     src="{% static 'pixel-img/4-5.png' %}"/>
+                                                <br>
+                                                <br>
+                                                <img class="img-fluid text-center"
+                                                     src="{% static 'pixel-img/4-6.png' %}"/>
+                                                <br>
+                                                <br>
+                                                <img class="img-fluid text-center"
+                                                     src="{% static 'pixel-img/4-7.png' %}"/>
+                                                <br>
+                                                <br>
+                                                <img class="img-fluid text-center"
+                                                     src="{% static 'pixel-img/4-8.png' %}"/>
+                                                <br>
+                                                <br>
+                                                <img class="img-fluid text-center"
+                                                     src="{% static 'pixel-img/4-9.png' %}"/>
+                                                <br>
+                                                <br>
+                                                <img class="img-fluid text-center"
+                                                     src="{% static 'pixel-img/4-10.png' %}"/>
+                                                <br>
+                                                <br>
+
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                    <div class="col-md-12 ml-auto mr-auto">
+                        <div class="card card-cyan collapsed-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Need to remove foreground too (excessively white areas of extenal
+                                    entities)</h3>
+
+                                <div class="card-tools">
+                                    <button type="button" class="btn text-white btn-tool" data-card-widget="collapse"><i
+                                            class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <!-- /.card-tools -->
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+
+                                <div class="text-center">
+                                    <div class="card card-success">
+                                        <div class="card-header">
+                                            <h3 class="card-title">Graph</h3>
+
+                                            <div class="card-tools">
+                                                <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                                                    <i
+                                                            class="fas fa-expand"></i>
+                                                </button>
+                                            </div>
+                                            <!-- /.card-tools -->
+                                        </div>
+                                        <div class="card-body">
+
+                                            <div class="text-center">
+
+                                                {#                                                <p class="text-bold"> Pneumonia </p>#}
+                                                <img class="img-fluid text-center"
+                                                     src="{% static 'pixel-img/5.png' %}"/>
+
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                    <div class="col-md-12 ml-auto mr-auto">
+                        <div class="card card-cyan collapsed-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Compare Intensity of Images with Pneumonia with No Findings or
+                                    Other Conditions</h3>
+
+                                <div class="card-tools">
+                                    <button type="button" class="btn text-white btn-tool" data-card-widget="collapse"><i
+                                            class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <!-- /.card-tools -->
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+
+                                <div class="text-center">
+                                    <div class="card card-success">
+                                        <div class="card-header">
+                                            <h3 class="card-title">Graph</h3>
+
+                                            <div class="card-tools">
+                                                <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                                                    <i
+                                                            class="fas fa-expand"></i>
+                                                </button>
+                                            </div>
+                                            <!-- /.card-tools -->
+                                        </div>
+                                        <div class="card-body">
+
+                                            <div class="text-center">
+
+                                                <p class="text-bold">
+                                                    Label: Mass, number of samples for intensity: 284
+                                                    Label: Pneumothorax, number of samples for intensity: 271
+                                                    Label: Hernia, number of samples for intensity: 13
+                                                    Label: Cardiomegaly, number of samples for intensity: 141
+                                                    Label: Emphysema, number of samples for intensity: 127
+                                                    Label: Effusion, number of samples for intensity: 644
+                                                    Label: Pneumonia, number of samples for intensity: 62
+                                                    Label: Pleural_Thickening, number of samples for intensity: 176
+                                                    Label: Fibrosis, number of samples for intensity: 84
+                                                    Label: Atelectasis, number of samples for intensity: 508
+                                                    Label: Infiltration, number of samples for intensity: 967
+                                                    Label: Edema, number of samples for intensity: 118
+                                                    Label: Consolidation, number of samples for intensity: 226
+                                                    Label: No Finding, number of samples for intensity: 1000
+                                                    Label: Nodule, number of samples for intensity: 313 </p>
+                                                <img class="img-fluid text-center"
+                                                     src="{% static 'pixel-img/6.png' %}"/>
+
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                    <div class="col-md-12 ml-auto mr-auto">
+                        <div class="card card-cyan collapsed-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Similar Distribution Group 1: Emphysema, Pleural Thickening,
+                                    Pneumothorax, Infitration</h3>
+
+                                <div class="card-tools">
+                                    <button type="button" class="btn text-white btn-tool" data-card-widget="collapse"><i
+                                            class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <!-- /.card-tools -->
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+
+                                <div class="text-center">
+                                    <div class="card card-success">
+                                        <div class="card-header">
+                                            <h3 class="card-title">Graph</h3>
+
+                                            <div class="card-tools">
+                                                <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                                                    <i
+                                                            class="fas fa-expand"></i>
+                                                </button>
+                                            </div>
+                                            <!-- /.card-tools -->
+                                        </div>
+                                        <div class="card-body">
+
+                                            <div class="text-center">
+
+                                                <p class="text-bold">
+                                                    Label: Emphysema, number of samples for intensity: 127
+                                                    Label: Pleural_Thickening, number of samples for intensity: 176
+                                                    Label: Pneumothorax, number of samples for intensity: 271
+                                                    Label: Infiltration, number of samples for intensity: 967</p>
+                                                <img class="img-fluid text-center"
+                                                     src="{% static 'pixel-img/7.png' %}"/>
+
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-12 ml-auto mr-auto">
+                        <div class="card card-cyan collapsed-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Similar Distribution Group 2: Consolidation, Edema, Effusion,
+                                    Hernia</h3>
+
+                                <div class="card-tools">
+                                    <button type="button" class="btn text-white btn-tool" data-card-widget="collapse"><i
+                                            class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <!-- /.card-tools -->
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+
+                                <div class="text-center">
+                                    <div class="card card-success">
+                                        <div class="card-header">
+                                            <h3 class="card-title">Graph</h3>
+
+                                            <div class="card-tools">
+                                                <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                                                    <i
+                                                            class="fas fa-expand"></i>
+                                                </button>
+                                            </div>
+                                            <!-- /.card-tools -->
+                                        </div>
+                                        <div class="card-body">
+
+                                            <div class="text-center">
+
+                                                <p class="text-bold">
+                                                    Label: Consolidation, number of samples for intensity: 226
+                                                    Label: Edema, number of samples for intensity: 118
+                                                    Label: Effusion, number of samples for intensity: 644
+                                                    Label: Hernia, number of samples for intensity: 13 </p>
+                                                <img class="img-fluid text-center"
+                                                     src="{% static 'pixel-img/8.png' %}"/>
+
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-12 ml-auto mr-auto">
+                        <div class="card card-cyan collapsed-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Similar Distribution Group 3: 'Pneumonia', 'Nodule',
+                                    'Cardiomegaly'</h3>
+
+                                <div class="card-tools">
+                                    <button type="button" class="btn text-white btn-tool" data-card-widget="collapse"><i
+                                            class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <!-- /.card-tools -->
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+
+                                <div class="text-center">
+                                    <div class="card card-success">
+                                        <div class="card-header">
+                                            <h3 class="card-title">Graph</h3>
+
+                                            <div class="card-tools">
+                                                <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                                                    <i
+                                                            class="fas fa-expand"></i>
+                                                </button>
+                                            </div>
+                                            <!-- /.card-tools -->
+                                        </div>
+                                        <div class="card-body">
+
+                                            <div class="text-center">
+
+                                                <p class="text-bold">
+                                                    Label: Pneumonia, number of samples for intensity: 62
+                                                    Label: Nodule, number of samples for intensity: 313
+                                                    Label: Cardiomegaly, number of samples for intensity: 141</p>
+                                                <img class="img-fluid text-center"
+                                                     src="{% static 'pixel-img/9.png' %}"/>
+
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-primary ">
+                                <div class="card-header">
+                                    <h3 class="card-title text-bold text-center">Summary</h3>
+
+
+                                    <!-- /.card-tools -->
+                                </div>
+                                <div class="card-body">
+
+                                    <ul>
+                                        <li>
+                                            Images in the dataset need to be normalized, in the range from 0.0 to
+                                            1.0
+                                        </li>
+                                        <li>
+                                            Background (almost black) needs to be removed, suggested threshold: >
+                                            0.1
+                                        </li>
+                                        <li>
+                                            Foreground (almost white) needs to be removed too, suggested thereshold:
+                                            <
+                                            0.9. (These colid
+                                            be external entities, absorbing light very well, possibly pieces of
+                                            plastic?)
+                                        </li>
+                                        <li>
+                                            'Pneumonia' images intensity distribution is quite similar to those of
+                                            'Nodlie', and
+                                            somewhat similar to those of 'Cardiomegaly'.
+                                        </li>
+                                        <li>
+                                            'Consolidation', 'Edema', 'Effusion', 'Hernia' have quite different from
+                                            Pneumonia, but very
+                                            similar to one another distributions.
+                                        </li>
+                                        <li>
+                                            Also, 'Emphysema', 'Pleural Thickening', 'Pneumothorax', 'Infitration'
+                                            form
+                                            another group
+                                            that has distribution very similar to one another
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+
+</div>
+{% include 'footer.html' %}
+<!-- jQuery -->
+
+</body>
+</html>

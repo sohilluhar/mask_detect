@@ -1,0 +1,152 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    {% include 'html_head.html' %}
+    <style type="text/css">
+        .bgimg {
+            background-image: url('{% static 'img/bg6.jpg' %}');
+            background-size: cover;
+            display: flex;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body class="hold-transition sidebar-collapse layout-fixed">
+<div class="wrapper">
+
+
+    {% include 'nav_bar.html' %}
+    {#<div class="btn ></div>#}
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper bgimg">
+
+        <!-- Content Header (Page header) -->
+        {#        <div class="content-header">#}
+        {#            <div class="container-fluid">#}
+        {#                <div class="row mb-2">#}
+        {#                    <div class="col-sm-6">#}
+        {#                        <h1 class="m-0 text-black-50">Dashboard</h1>#}
+        {#                    </div><!-- /.col -->#}
+        {#                    <div class="col-sm-6">#}
+        {#                        <ol class="breadcrumb float-sm-right">#}
+        {#                            <li class="breadcrumb-item"><a href="{% url 'news' %}" class="text-black-50">News</a></li>#}
+        {#                            <li class="breadcrumb-item"><a href="/" class="text-black-50">Logout</a></li>#}
+        {#                        </ol>#}
+        {#                    </div><!-- /.col -->#}
+        {#                </div><!-- /.row -->#}
+        {#            </div><!-- /.container-fluid -->#}
+        {#        </div>#}
+        <!-- /.content-header -->
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid ">
+                <br>
+                <br>
+                <div class="row">
+
+                    <div class="col-4">
+
+
+                        <a href="http://127.0.0.1:8001">
+                            <div class="card">
+                                <div class="card-body register-card-body">
+
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="text-center">
+
+                                                <img class="img-fluid text-center" src="{% static 'img/bg8.jpg' %}"/>
+
+                                                <br/>
+                                                <h2 class="text-primary mt-3">Heart Disease Prediction</h2>
+                                            </div>
+                                        </div>
+                                        <!-- /.col -->
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- /.form-box -->
+
+                    <div class="col-4">
+
+
+                        <a href="{% url 'prediction' %}">
+                            <div class="card">
+                                <div class="card-body register-card-body">
+
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="text-center">
+
+                                                <img class="img-fluid text-center" src="{% static 'img/bg17.jpg' %}"/>
+
+                                                <br/>
+                                                <h2 class="text-primary mt-3">Pneumonia Detection</h2>
+                                            </div>
+                                        </div>
+                                        <!-- /.col -->
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </a>
+
+
+                        <!-- /.form-box -->
+                    </div><!-- /.card -->
+
+                    <div class="col-4 ">
+
+
+                        <a href="{% url 'chart' %}">
+                            <div class="card">
+                                <div class="card-body register-card-body">
+
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="text-center">
+
+                                                <img class="img-fluid text-center" src="{% static 'img/bg12.jpg' %}"/>
+
+                                                <br/>
+                                                <h2 class="text-primary mt-3">Exploratory data analysis</h2>
+                                            </div>
+                                        </div>
+                                        <!-- /.col -->
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </a>
+
+
+                        <!-- /.form-box -->
+                    </div><!-- /.card -->
+
+
+                </div>
+
+            </div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+
+</div>
+{% include 'footer.html' %}
+<!-- jQuery -->
+
+</body>
+</html>

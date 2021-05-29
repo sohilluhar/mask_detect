@@ -1,0 +1,261 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    {% include 'html_head.html' %}
+     <style type="text/css">
+        .bgimg {
+            background-image: url('{% static 'back.png' %}');
+        }
+    </style>
+</head>
+<body class="hold-transition sidebar-collapse layout-fixed" onload="notification()">
+<div class="wrapper">
+
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper bgimg">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="text-primary">Prediction</h1>
+                    </div><!-- /.col -->
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                            <li class="breadcrumb-item"><a href="/">Logout</a></li>
+{#                                                        <li class="breadcrumb-item active" onclick="notification()">Buy Noti</li>#}
+                        </ol>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content-header -->
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-10 offset-1">
+
+
+                        <div class="card">
+                            <div class="card-body register-card-body">
+
+
+                                <div class="row">
+
+                                    <div class="col-12">
+                                        <img class="img-fluid" src="data:image/png;base64,{{plot1}}">
+
+                                        <h2 class="text-danger text-center">Plot 1</h2>
+                                    </div>
+                                    <!-- /.col -->
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <!-- /.form-box -->
+                    </div>
+
+
+
+                    <!-- /.form-box -->
+
+                    <!-- /.card -->
+                </div>
+ <div class="row">
+
+                    <div class="col-10 offset-1">
+
+
+                        <div class="card">
+                            <div class="card-body register-card-body">
+
+
+                                <div class="row">
+
+                                    <div class="col-12">
+                                        <img class="img-fluid" src="data:image/png;base64,{{plot2}}">
+
+                                        <h2 class="text-danger text-center">Plot 2</h2>
+                                    </div>
+                                    <!-- /.col -->
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <!-- /.form-box -->
+                    </div>
+
+
+
+                    <!-- /.form-box -->
+
+                    <!-- /.card -->
+                </div>
+ <div class="row">
+
+                    <div class="col-10 offset-1">
+
+
+                        <div class="card">
+                            <div class="card-body register-card-body">
+
+
+                                <div class="row">
+
+                                    <div class="col-12">
+                                        <img class="img-fluid" src="data:image/png;base64,{{plot3}}">
+
+                                        <h2 class="text-danger text-center">Plot 3</h2>
+                                    </div>
+                                    <!-- /.col -->
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <!-- /.form-box -->
+                    </div>
+
+
+
+                    <!-- /.form-box -->
+
+                    <!-- /.card -->
+                </div>
+
+<div class="row">
+      <div class="col-6">
+                <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">BitCoin Buy Price Notification History</h3>
+{#              <h3 class="card-title">{{buy_noti}}</h3>#}
+{#              <h3 class="card-title">{{sell_noti}}</h3>#}
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Day</th>
+                  <th>Price($)</th>
+
+                </tr>
+                </thead>
+                <tbody>
+
+                {%for key,val in buy_noti.items%}
+                <tr>
+                  <td>{{key}}</td>
+                  <td>{{ val }}</td>
+                </tr>
+                {%endfor%}
+
+
+                </tfoot>
+              </table>
+            </div>
+            <!-- /.card-body -->
+          </div>
+            </div>
+      <div class="col-6">
+
+                <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">BitCoin Sell Price Notification History</h3>
+{#              <h3 class="card-title">{{buy_noti}}</h3>#}
+{#              <h3 class="card-title">{{sell_noti}}</h3>#}
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Day</th>
+                  <th>Price($)</th>
+
+                </tr>
+                </thead>
+                <tbody>
+
+
+
+                {%for key,val in sell_noti.items%}
+                <tr>
+                  <td>{{key}}</td>
+                  <td>{{ val }}</td>
+                </tr>
+                {%endfor%}
+
+
+
+                </tfoot>
+              </table>
+            </div>
+            <!-- /.card-body -->
+          </div>
+</div>
+</div>
+
+            </div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    {% include 'footer1.html' %}
+
+</div>
+<!-- ./wrapper -->
+<script src="{% static 'plugins/toastr/toastr.min.js' %}"></script>
+<script src="{% static 'plugins/datatables/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'plugins/datatables-bs4/js/dataTables.bootstrap4.min.js' %}"></script>
+<script src="{% static 'plugins/datatables-responsive/js/dataTables.responsive.min.js' %}"></script>
+<script src="{% static 'plugins/datatables-responsive/js/responsive.bootstrap4.min.js' %}"></script>
+
+{% include 'footer.html' %}
+<script>
+     $(function () {
+    $("#example1").DataTable({
+      "responsive": true,
+      "autoWidth": false,
+    });
+
+  });
+   function notification(){
+
+             {%for key,val in sell_noti.items%}
+
+
+      $(document).Toasts('create', {
+        class: 'bg-warning',
+        title: 'Sell BitCoin {{ key }}',
+        body: 'Sell bitcoin at ${{ val }} price'
+      });
+                {%endfor%}
+
+                {%for key,val in buy_noti.items%}
+
+      $(document).Toasts('create', {
+        class: 'bg-success',
+        title: 'Buy BitCoin {{ key }}',
+        body: 'Buy bitcoin at ${{ val }} price'
+      });
+                {%endfor%}
+
+
+
+
+    }
+</script>
+</body>
+</html>

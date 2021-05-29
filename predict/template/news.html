@@ -1,0 +1,153 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    {% include 'html_head.html' %}
+     <style type="text/css">
+        .bgimg {
+            background-image: url('{% static 'back.png' %}');
+        }
+    </style>
+</head>
+<body class="hold-transition sidebar-collapse layout-fixed">
+<div class="wrapper">
+
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper bgimg">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="text-primary">News</h1>
+                    </div><!-- /.col -->
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                            <li class="breadcrumb-item"><a href="/">Logout</a></li>
+                            {#                            <li class="breadcrumb-item active">Dashboard v1</li>#}
+                        </ol>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content-header -->
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-10 offset-1">
+
+
+   <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Latest News</h3>
+
+
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-0">
+                <ul class="products-list product-list-in-card pl-2 pr-2">
+                  <li class="item">
+
+                    <div class="product-info">
+                      <a href="https://news.bitcoin.com/q3-crypto-volumes-up-by-155-billion-as-defi-hype-drives-dex-growth-by-197/" target="_blank" class="product-title">
+                          Q3 Crypto Volumes up by $155 Billion as Defi Hype Drives DEX Growth by 197%
+                      </a>
+                      <span class="product-description">
+The latest data from Coingecko shows that the combined trading volumes of cryptocurrency exchanges went up by $155 billion between July and September, from $175.7 billion to $330.6 billion. The new total volume represents a 88% increase which Coingecko attributes to the decentralized finance (defi) hype and yield farming frenzy that peaked in August
+                      </span>
+                    </div>
+                  </li>
+
+                    <li class="item">
+
+                    <div class="product-info">
+                      <a href="https://news.bitcoin.com/kate-winslet-cryptocurrency-movie-onecoin/" target="_blank" class="product-title">
+Kate Winslet to Star in Cryptocurrency Movie About Onecoin Ponzi Scheme
+
+                      </a>
+                      <span class="product-description">
+A movie is being made about Onecoin’s cryptocurrency Ponzi scheme starring Oscar winner Kate Winslet. This Hollywood MGM movie is based on a true story told by a victim of the cryptocurrency fraud scheme.
+                      </span>
+                    </div>
+                  </li><li class="item">
+
+                    <div class="product-info">
+                      <a href="https://news.bitcoin.com/us-government-moves-to-regulate-cryptocurrencies-after-attorney-general-publishes-enforcement-framework/" target="_blank" class="product-title">
+US Government Moves to Regulate Cryptocurrencies After Attorney General Publishes Enforcement Framework
+                      </a>
+                      <span class="product-description">
+United States Attorney General (AG) William Barr says the recent publishing of the Cryptocurrency Enforcement Framework will help law enforcement to fight elements using digital currencies for illicit ends. Produced by the AG’s Cyber-Digital Task Force, the framework provides law enforcement with what Barr terms a “comprehensive overview of the emerging threats and enforcement challenges associated with the increasing prevalence and use of cryptocurrency.”
+                      </span>
+                    </div>
+                  </li><li class="item">
+
+                    <div class="product-info">
+                      <a href="https://news.bitcoin.com/defi-market-cap-drops-25-1-in-one-day-proponents-say-tokens-self-correcting/" target="_blank" class="product-title">
+Defi Market Cap Drops 25.1% in One Day: Proponents Say Tokens Self Correcting
+                      </a>
+                      <span class="product-description">
+The latest data from Santiment shows that the collective market capitalization of all defi-related assets dropped by 25.1% on October 7, while daily trading volumes went down 30.2%. The data also shows popular defi tokens like Sushi took heavy knocks after dropping by 50.9% during the week. Also making the list of heavy droppers is Uniswap’s new token (UNI) which lost 38.2% and the YFI which dropped by 31.3%.                     </span>
+                    </div>
+                  </li><li class="item">
+
+                    <div class="product-info">
+                      <a href="https://news.bitcoin.com/tim-draper-indian-crypto-exchange-unocoin/" target="_blank" class="product-title">
+Venture Capitalist Tim Draper Bets Big on Indian Crypto Exchange, Undeterred by Crypto Ban Reports
+                      </a>
+                      <span class="product-description">
+American entrepreneur and venture capitalist Tim Draper has invested in Indian cryptocurrency exchange Unocoin despite regulatory uncertainty and reports of a possible crypto ban in India. Unocoin has seen the number of new users grow 10-fold since the supreme court quashed the banking restriction by the central bank.
+                      </span>
+                    </div>
+                  </li><li class="item">
+
+                    <div class="product-info">
+                      <a href="https://news.bitcoin.com/market-update-bitcoin-captures-11k-flash-buy-signals-bollinger-band-squeeze/" target="_blank" class="product-title">
+Market Update: Bitcoin Captures $11K, Flash Buy Signals, Bollinger Band Squeeze
+                      </a>
+                      <span class="product-description">
+Cryptocurrency markets are seeing decent gains on Friday following the announcement Square made the day prior about purchasing $50 million worth of bitcoin for reserves. During the morning trading sessions, the overall market capitalization of all 7,000+ crypto assets is up over 2% hovering at $340 billion.      </div>
+                  </li>
+                  <!-- /.item -->
+                  <!-- /.item -->
+
+                </ul>
+              </div>
+              <!-- /.card-body -->
+
+              <!-- /.card-footer -->
+            </div>
+
+                    </div>
+
+
+
+
+                    <!-- /.card -->
+                </div>
+
+
+
+            </div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    {% include 'footer1.html' %}
+
+</div>
+<!-- ./wrapper -->
+<script src="{% static 'plugins/chart.js/Chart.min.js' %}"></script>
+
+{% include 'footer.html' %}
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,257 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    {% include 'html_head.html' %}
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" type="text/javascript"
+            charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js" type="text/javascript"
+            charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css"/>
+    <title>Map</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+<body class="hold-transition sidebar-collapse layout-fixed ">
+<div class="wrapper">
+
+    {% include 'nav_bar.html' %}
+
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <br>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="text-center">Near By hospitals</h3>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card card-row card-primary">
+                            <div class="card-header">
+                                <h3 class="card-title">
+                                    {{ hospitalOne }}
+
+                                </h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="card card-primary card-outline">
+                                    <div class="card-header">
+                                        <h4 class="card-title text-bold">Address</h4>
+                                        <br>
+                                        <hr>
+                                        <p>{{ hospitalOne_address }}</p>
+                                    </div>
+                                </div>
+                                {#                                <div class="card card-primary card-outline">#}
+                                {#                                    <div class="card-header">#}
+                                {#                                        <h4 class="card-title text-bold">Doctor's Name</h4>#}
+                                {#                                        <br>#}
+                                {#                                        <hr>#}
+                                {#                                        <p>{{ hospitalOne_Docter_name }}</p>#}
+                                {#                                    </div>#}
+                                {#                                </div>#}
+                                <div class="card card-primary card-outline">
+                                    <div class="card-header">
+                                        <h4 class="card-title text-bold">Contact No</h4>
+                                        <br>
+                                        <hr>
+                                        {% for key,val in hospitalOne_contect.items %}
+                                            <p>
+                                                <span class="text-bold">{{ key }}
+                                                 : </span>
+
+                                                {% for i in val %}
+                                                    {% for key,val in i.items %}
+                                                        {{ val }}
+                                                    {% endfor %}
+                                                {% endfor %}
+                                            </p>
+                                        {% endfor %}                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <a class="btn btn-link text-primary" target="_blank"
+                                           href="https://www.google.com/maps/dir/{{ lat }},{{ long }}/{{ hospitalOne_latitude }},{{ hospitalOne_longitude }}"
+                                        >Get Direction</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card card-row card-primary">
+                            <div class="card-header">
+                                <h3 class="card-title">
+                                    {{ hospitalTwo }}
+                                </h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="card card-primary card-outline">
+                                    <div class="card-header">
+                                        <h4 class="card-title text-bold">Address</h4>
+                                        <br>
+                                        <hr>
+                                        <p>{{ hospitalTwo_address }}</p>
+                                    </div>
+                                </div>
+                                {#                                <div class="card card-primary card-outline">#}
+                                {#                                    <div class="card-header">#}
+                                {#                                        <h4 class="card-title text-bold">Doctor's Name</h4>#}
+                                {#                                        <br>#}
+                                {#                                        <hr>#}
+                                {#                                        <p>{{ hospitalTwo_Docter_name }}</p>#}
+                                {#                                    </div>#}
+                                {#                                </div>#}
+                                <div class="card card-primary card-outline">
+                                    <div class="card-header">
+                                        <h4 class="card-title text-bold">Contact No</h4>
+                                        <br>
+                                        <hr>
+
+                                        {% for key,val in hospitalTwo_contect.items %}
+                                            <p>
+                                                <span class="text-bold">{{ key }}
+                                                 : </span>
+
+                                                {% for i in val %}
+                                                    {% for key,val in i.items %}
+                                                        {{ val }}
+                                                    {% endfor %}
+                                                {% endfor %}
+                                            </p>
+                                        {% endfor %}
+                                        {#                                        <p>{{ hospitalTwo_contect }}</p>#}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <a class="btn btn-link text-primary" target="_blank"
+                                           href="https://www.google.com/maps/dir/{{ lat }},{{ long }}/{{ hospitalTwo_latitude }},{{ hospitalTwo_longitude }}"
+                                        >Get Direction</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 class="text-center">Map</h4>
+                        <div style="align-content: center; width: 100%; height: 400px;"
+                             id="mapContainer"></div>
+                        <br>
+                        <br>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- /.content -->
+    </div>
+
+</div>
+{% include 'footer.html' %}
+<!-- jQuery -->
+<script>
+    const latitude = {{ lat }};
+    const longitude = {{ long }};
+    // Initialize the platform object:
+    var platform = new H.service.Platform({
+        'apikey': 'OzY0jbh2SnqI5LeBhsvblvlLpa4xKet3XPTEngeyVAs'
+    });
+
+    const lat = latitude;
+    const lng = longitude;
+    const hospitalOne_lat = {{hospitalOne_latitude}};
+    const hospitalOne_lng = {{hospitalOne_longitude}};
+
+    const hospitalTwo_lat = {{hospitalTwo_latitude}};
+    const hospitalTwo_lng = {{hospitalTwo_longitude}};
+
+    // Obtain the default map types from the platform object
+    var maptypes = platform.createDefaultLayers();
+
+    // Initialize a map:
+    var map = new H.Map(
+        document.getElementById('mapContainer'),
+        maptypes.raster.terrain.map,
+        {
+            zoom: 14,
+            center: {lat: lat, lng: lng}
+        });
+
+    // Enable the event system on the map instance:
+    var mapEvents = new H.mapevents.MapEvents(map);
+
+    // Instantiate the default behavior, providing the mapEvents object:
+    var behavior = new H.mapevents.Behavior(mapEvents);
+
+    var myLocation_marker = new H.map.Marker({lat: lat, lng: lng});
+    var hospitalOne_marker = new H.map.Marker({lat: hospitalOne_lat, lng: hospitalOne_lng});
+    var hospitalTwo_marker = new H.map.Marker({lat: hospitalTwo_lat, lng: hospitalTwo_lng});
+
+    // Add the marker to the map:
+    map.addObject(myLocation_marker);
+    map.addObject(hospitalOne_marker);
+    map.addObject(hospitalTwo_marker);
+
+
+    // Create the default UI:
+    var ui = H.ui.UI.createDefault(map, maptypes);
+
+    // Add event listener to the marker:
+    myLocation_marker.addEventListener('tap', function (evt) {
+
+        // Create an info bubble object at a specific geographic location:
+        var bubble = new H.ui.InfoBubble({lng: lng, lat: lat}, {
+            content: ''
+        });
+        bubble.setContent('<div style="height: 130px; overflow: auto; width: 270px;"><h3>"Your Location"</h3></div>');
+        // Add info bubble to the UI:
+        ui.addBubble(bubble);
+    });
+
+    hospitalOne_marker.addEventListener('tap', function (evt) {
+
+        // Create an info bubble object at a specific geographic location:
+        var bubble = new H.ui.InfoBubble({lng: hospitalOne_lng, lat: hospitalOne_lat}, {
+            content: ''
+        });
+        bubble.setContent('<div style="height: 130px; overflow: auto; width: 270px;"><h3>{{hospitalOne}}</h3><p>{{hospitalOne_address}}</p></div>');
+        // Add info bubble to the UI:
+        ui.addBubble(bubble);
+    });
+
+    hospitalTwo_marker.addEventListener('tap', function (evt) {
+
+        // Create an info bubble object at a specific geographic location:
+        var bubble = new H.ui.InfoBubble({lng: hospitalTwo_lng, lat: hospitalTwo_lat}, {
+            content: ''
+        });
+        bubble.setContent('<div style="height: 130px; overflow: auto; width: 270px;"><h3>{{hospitalTwo}}</h3><p>{{hospitalTwo_address}}</p></div>');
+        // Add info bubble to the UI:
+        ui.addBubble(bubble);
+    });
+
+
+</script>
+
+</body>
+</html>
